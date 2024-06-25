@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html">Mujeres Digitales</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="sidebarMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html"><i class="fas fa-tachometer-alt"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="perfil.html"><i class="fas fa-user"></i> Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html"><i class="fas fa-users"></i> Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clientes.html"><i class="fas fa-user-friends"></i> Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html"><i class="fas fa-list"></i> Categorías</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html"><i class="fas fa-box"></i> Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pedidos.html"><i class="fas fa-shopping-cart"></i> Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="mt-4 mb-4">Registro de Municipios y Manzanas del Cuidado</h1>
+    
+    <!-- Menú desplegable de Municipios -->
+    <div class="form-group">
+        <label for="selectMunicipio">Seleccionar Municipio:</label>
+        <select class="form-control" id="selectMunicipio" onchange="filtrarManzanas()">
+            <option value="">Seleccionar Municipio</option>
+            <option value="Municipio A">Municipio A</option>
+            <option value="Municipio B">Municipio B</option>
+            <option value="Municipio B">Municipio C</option>
+            <option value="Municipio B">Municipio D</option>
+        </select>
+    </div>
+    
+    <!-- Tabla de Manzanas -->
+    <table id="tablaManzanas" class="table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-municipio="Municipio A">
+                <td>001</td>
+                <td>Manzana 1</td>
+                <td>Localidad A</td>
+                <td>Dirección A</td>
+            </tr>
+            <tr data-municipio="Municipio A">
+                <td>002</td>
+                <td>Manzana 2</td>
+                <td>Localidad B</td>
+                <td>Dirección B</td>
+            </tr>
+            <tr data-municipio="Municipio B">
+                <td>003</td>
+                <td>Manzana 3</td>
+                <td>Localidad C</td>
+                <td>Dirección C</td>
+            </tr>
+            <tr data-municipio="Municipio B">
+                <td>004</td>
+                <td>Manzana 4</td>
+                <td>Localidad D</td>
+                <td>Dirección D</td>
+            </tr>
+            <!-- Agregar más filas según sea necesario -->
+        </tbody>
+    </table>
+</div>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
